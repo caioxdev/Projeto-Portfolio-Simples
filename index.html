@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css'>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="./syles.css/style.css">
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <title>Portfólio</title>
+</head>
+<body>
+    <div id="particles-js"></div>
+    
+    <header data-aos="fade-down">
+       <div class="logo">
+        <p>Caio Seabra de Queiroz</p>
+       </div>
+        <nav>
+            <a class="link-header" href="#">Início</a>
+            <a class="link-header" href="#">Sobre mim</a>
+            <a class="link-header" href="#">Projetos</a>
+            <a class="link-header" href="#">Habilidades</a>
+            <a href="#">
+                <button class="btn-header">Contato</button>
+            </a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="topo-site">
+            <div class="flex">
+                <div class="txt-topo" data-aos="fade-right">
+                    <h1>Olá, sou o Caio!</h1>
+                    <p></p>
+                    <a href="#">
+                        <button class="btn-topo">Contato</button>
+                    </a>
+                </div>
+                <div class="img-topo" data-aos="fade-left">
+                    <img src="./img/minha imagem.svg" alt="Minha imagem">
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<script>
+        AOS.init();
+
+        let p_tag = document.querySelector('.txt-topo p');
+        let welcome_text = 'Desenvolvedor Fullstack.';
+        
+        function typeText() {
+            p_tag.innerHTML = ''
+            welcome_text.split('').forEach((char, index) => {
+                setTimeout(() => {
+                    p_tag.innerHTML += char;
+                
+                    if (index === welcome_text.length - 1) {
+                        setTimeout(typeText, 2000); //
+                    }
+                }, 120 * index);
+            });
+        }
+        
+        typeText();
+        
+        particlesJS("particles-js", {
+    "particles": {
+      "number": {
+        "value": 30,       /* mais partículas */
+        "density": {
+          "enable": true,
+          "value_area": 1000 /* área maior -> espalha mais */
+        }
+      },
+      "size": { "value": 3 },
+      "move": { "speed": 2 },
+      "line_linked": { "enable": true }
+    }
+  });
+        </script>
+
+</html>
