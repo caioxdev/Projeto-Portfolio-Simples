@@ -39,3 +39,7 @@ Inclui o uso de bibliotecas externas para animações e efeitos.
 * Criar seções completas (projetos, habilidades e contato).
 
 * Melhorar o design geral.
+
+🔍 Clica no link para visualizar:
+
+* https://caioxdev.github.io/Projeto-Portfolio-Simples/
